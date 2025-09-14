@@ -1,14 +1,15 @@
-export { default as OnboardingScreen } from "../pages/OnboardingScreen";
-export { default as SignIn } from "../auth/SignIn";
-export { default as SignUp } from "../auth/SignUp";
 export { default as SuccesVerification } from "../../src/auth/verify/SuccesVerification";
 export { default as VerifyEmail } from "../../src/auth/verify/VerifyEmail";
 export { default as VerifyPhone } from "../../src/auth/verify/VerifyPhone";
 export { default as VerifyPhoneVerification } from "../../src/auth/verify/VerifyPhoneVerification";
-export { default as ForgotPassword } from "../services/ForgotPassword";
-export { default as SuccesSuccessForgotPage } from "../services/SuccessForgotPage";
-export { default as ForgotPasswordPhoneVerify } from "../services/phone/ForgotPasswordPhoneVerify";
-export { default as ForgotPasswordPhone } from "../services/phone/ForgotPasswordPhone";
+export { default as SignIn } from "../auth/SignIn";
+export { default as SignUp } from "../auth/SignUp";
+export { default as TabRouter } from "../navigation/TabRouter";
+export { default as OnboardingScreen } from "../pages/OnboardingScreen";
 export { default as ForgotPasswordEmail } from "../services/email/ForgotPasswordEmail";
 export { default as ForgotPasswordEmailVerify } from "../services/email/ForgotPasswordEmailVerify";
-export { default as TabRouter } from "../navigation/TabRouter";
+export { default as ForgotPassword } from "../services/ForgotPassword";
+export { default as ForgotPasswordPhone } from "../services/phone/ForgotPasswordPhone";
+export { default as ForgotPasswordPhoneVerify } from "../services/phone/ForgotPasswordPhoneVerify";
+export { default as SuccesSuccessForgotPage } from "../services/SuccessForgotPage";
+
