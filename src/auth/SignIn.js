@@ -1,20 +1,20 @@
-import React, { useState } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  TouchableOpacity,
-  KeyboardAvoidingView,
-  TextInput,
-  Image,
-} from "react-native";
-import { AntDesign, Ionicons } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { Formik } from "formik";
-import * as Yup from "yup";
+import React, { useState } from "react";
+import {
+  Image,
+  KeyboardAvoidingView,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import Toast from "react-native-toast-message";
-import { auth } from "../../firebase";
+import * as Yup from "yup";
+//import { auth } from "../../firebase";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const SignIn = () => {
@@ -57,10 +57,10 @@ const SignIn = () => {
     setIsFormDirty(false);
     // Simulating API call or other asynchronous operation
     try {
-      const userCredential = await auth.signInWithEmailAndPassword(
-        values.email,
-        values.password
-      );
+      // const userCredential = await auth.signInWithEmailAndPassword(
+      //   values.email,
+      //   values.password
+      // );
       console.log("Successfully logged in as:" + values.email);
       await AsyncStorage.setItem("isLoggedIn", "true");
       Toast.show({

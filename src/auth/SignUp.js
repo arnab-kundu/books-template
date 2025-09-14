@@ -1,19 +1,19 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  TouchableOpacity,
-  KeyboardAvoidingView,
-  TextInput,
-} from "react-native";
 import { AntDesign, Ionicons } from "@expo/vector-icons";
-import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { Formik } from "formik";
-import * as Yup from "yup";
+import React, { useState } from "react";
+import {
+  KeyboardAvoidingView,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import Toast from "react-native-toast-message";
-import { auth, firebase } from "../../firebase";
+import * as Yup from "yup";
+//import { auth, firebase } from "../../firebase";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const SignUp = () => {
@@ -80,13 +80,13 @@ const SignUp = () => {
       await AsyncStorage.setItem("username", values.name);
 
       // Create the user with email and password
-      const userCredential = await auth.createUserWithEmailAndPassword(
-        values.email || email,
-        values.password
-      );
+      // const userCredential = await auth.createUserWithEmailAndPassword(
+      //   values.email || email,
+      //   values.password
+      // );
 
       // Access the user from the userCredential
-      const user = userCredential.user;
+      // const user = userCredential.user;
 
       // Display success toast on successful sign-up
       Toast.show({
