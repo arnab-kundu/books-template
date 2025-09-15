@@ -5,13 +5,13 @@ import React, { useState } from "react";
 import {
   Image,
   KeyboardAvoidingView,
-  SafeAreaView,
   StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
   View,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import Toast from "react-native-toast-message";
 import * as Yup from "yup";
 //import { auth } from "../../firebase";
@@ -299,7 +299,7 @@ const SignIn = () => {
       {/* Other methods Social Loginss */}
       <View>
         <TouchableOpacity
-          style={{ backgroundColor: "white", height: "30%", bottom: "18%" }}
+          style={{ backgroundColor: "white", height: "30%", bottom: "16%" }}
           onPress={googleSignInButton}
         >
           <Image
@@ -308,7 +308,7 @@ const SignIn = () => {
           />
         </TouchableOpacity>
         <TouchableOpacity
-          style={{ backgroundColor: "white", height: "30%", bottom: "35%" }}
+          style={{ backgroundColor: "white", height: "30%", bottom: "30%" }}
           onPress={() => console.log("pressed on apple")}
         >
           <Image

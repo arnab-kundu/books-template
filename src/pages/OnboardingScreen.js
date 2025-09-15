@@ -1,15 +1,13 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useNavigation } from "@react-navigation/native";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import {
+  Image,
   StyleSheet,
   Text,
-  View,
-  Dimensions,
-  SafeAreaView,
   TouchableOpacity,
-  Image,
+  View
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import Swiper from "react-native-swiper";
 
 const OnboardingScreen = () => {
