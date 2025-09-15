@@ -1,7 +1,7 @@
 import { AntDesign, Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { Formik } from "formik";
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   KeyboardAvoidingView,
   StyleSheet,
@@ -166,8 +166,8 @@ const SignUp = () => {
             touched,
             setFieldTouched,
           }) => (
-            <>
-              <Text style={{ fontSize: 17, fontWeight: "500" }}>Name</Text>
+            <View>
+              <Text style={{ fontSize: 17, fontWeight: "500", top: "0%" }}>Name</Text>
               <TextInput
                 autoCapitalize="none"
                 placeholderTextColor="#B8B8B8"
@@ -184,6 +184,7 @@ const SignUp = () => {
                   width: "83%",
                   height: "11%",
                   bottom: "2.5%",
+                  top: "2%",
                   borderRadius: 10,
                   paddingLeft: 10,
                   borderColor:
@@ -194,7 +195,7 @@ const SignUp = () => {
                 }}
               />
 
-              <Text style={{ fontSize: 17, fontWeight: "500", bottom: "5%" }}>
+              <Text style={{ fontSize: 17, fontWeight: "500", bottom: "5%", top: "8%" }}>
                 Email
               </Text>
               <TextInput
@@ -213,6 +214,7 @@ const SignUp = () => {
                   width: "83%",
                   height: "11%",
                   bottom: "8%",
+                  top: "10%",
                   borderRadius: 10,
                   paddingLeft: 10,
                   borderColor:
@@ -223,7 +225,7 @@ const SignUp = () => {
                 }}
               />
 
-              <Text style={{ fontSize: 17, fontWeight: "500", bottom: "11%" }}>
+              <Text style={{ fontSize: 17, fontWeight: "500", bottom: "11%", top: "16%" }}>
                 Password
               </Text>
               <TextInput
@@ -243,6 +245,7 @@ const SignUp = () => {
                   width: "83%",
                   height: "11%",
                   bottom: "14%",
+                  top: "18%",
                   borderRadius: 10,
                   paddingLeft: 10,
                   borderColor:
@@ -254,7 +257,7 @@ const SignUp = () => {
               />
 
               <TouchableOpacity
-                style={{ bottom: "27%", alignSelf: "flex-end", right: "22.5%" }}
+                style={{ alignSelf: "flex-end", right: "22.5%", top: "8%" }}
                 onPress={togglePasswordVisibility}
               >
                 <Ionicons
@@ -289,7 +292,7 @@ const SignUp = () => {
                   Register
                 </Text>
               </TouchableOpacity>
-            </>
+            </View>
           )}
         </Formik>
       </KeyboardAvoidingView>
@@ -314,10 +317,11 @@ const styles = StyleSheet.create({
   submitButton: {
     width: "85%",
     alignSelf: "center",
-    height: "13%",
+    height: "16%",
     borderRadius: 30,
     marginTop: 20,
     bottom: "26%",
     right: "7.9%",
+    top: "20%"
   },
 });

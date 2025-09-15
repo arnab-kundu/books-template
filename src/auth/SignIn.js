@@ -1,7 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { Formik } from "formik";
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Image,
   KeyboardAvoidingView,
@@ -153,8 +153,8 @@ const SignIn = () => {
             touched,
             setFieldTouched,
           }) => (
-            <>
-              <Text style={{ fontSize: 17, fontWeight: "500" }}>Email</Text>
+            <View>
+              <Text style={{ fontSize: 17, fontWeight: "500", top: "0%" }}>Email</Text>
               <TextInput
                 autoCapitalize="none"
                 placeholderTextColor="#B8B8B8"
@@ -170,7 +170,7 @@ const SignIn = () => {
                   backgroundColor: "#FAFAFA",
                   width: "83%",
                   height: "13%",
-                  bottom: "4%",
+                  top: "2%",
                   borderRadius: 10,
                   paddingLeft: 10,
                   borderColor:
@@ -181,7 +181,7 @@ const SignIn = () => {
                 }}
               />
 
-              <Text style={{ fontSize: 17, fontWeight: "500", bottom: "7%" }}>
+              <Text style={{ fontSize: 17, fontWeight: "500", top: "8%" }}>
                 Password
               </Text>
               <TextInput
@@ -200,7 +200,7 @@ const SignIn = () => {
                   backgroundColor: "#FAFAFA",
                   width: "83%",
                   height: "13%",
-                  bottom: "12%",
+                  top: "10%",
                   borderRadius: 10,
                   paddingLeft: 10,
                   borderColor:
@@ -212,7 +212,7 @@ const SignIn = () => {
               />
 
               <TouchableOpacity
-                style={{ bottom: "28%", alignSelf: "flex-end", right: "22.5%" }}
+                style={{ bottom: "28%", alignSelf: "flex-end", right: "22.5%", top: "-2%" }}
                 onPress={togglePasswordVisibility}
               >
                 <Ionicons
@@ -228,6 +228,7 @@ const SignIn = () => {
                   bottom: "28%",
                   width: "30%",
                   left: "0%",
+                  top: "4%"
                 }}
                 onPress={goToForgotPassword}
                 activeOpacity={0.6}
@@ -246,7 +247,7 @@ const SignIn = () => {
 
               {/* Responsive button to submit the form */}
               <TouchableOpacity
-                style={[
+                style={[                
                   styles.submitButton,
                   {
                     backgroundColor:
@@ -268,7 +269,7 @@ const SignIn = () => {
                   Login
                 </Text>
               </TouchableOpacity>
-            </>
+            </View>
           )}
         </Formik>
       </KeyboardAvoidingView>
@@ -304,7 +305,7 @@ const SignIn = () => {
         >
           <Image
             source={require("../../assets/styling/logininwithgoogle.png")}
-            style={{ height: "35%", alignSelf: "center", width: "85%" }}
+            style={{ height: "38%", alignSelf: "center", width: "85%" }}
           />
         </TouchableOpacity>
         <TouchableOpacity
@@ -313,7 +314,7 @@ const SignIn = () => {
         >
           <Image
             source={require("../../assets/styling/logininwithapple.png")}
-            style={{ height: "35%", alignSelf: "center", width: "85%" }}
+            style={{ height: "38%", alignSelf: "center", width: "85%" }}
           />
         </TouchableOpacity>
       </View>
@@ -327,10 +328,11 @@ const styles = StyleSheet.create({
   submitButton: {
     width: "85%",
     alignSelf: "center",
-    height: "13%",
+    height: "16%",
     borderRadius: 30,
     marginTop: 20,
     bottom: "33%",
     right: "7.9%",
+    top: "20%"
   },
 });
